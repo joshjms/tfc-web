@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width,initial-scale=1">
+    <title> TFC </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img class="logo" src="logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="hero-box">
+            <h1>TFC Fan Club</h1>
+            <p>Competitive Programming Union</p>
+            <a href="" class="hero-btn">Learn More</a>
+        </div>
+    </section>
+    <section class="members">
+        <h1>TFC Members</h1>
+        <p>And of course, there's Tzaph</p>
+        <div class="row">
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Maxi.jpg);">
+                <h3>Maximilliano Utomo Quok</h3>
+            </div>
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Jv.jpg);">
+                <h3>Joshua Adrian Cahyono</h3>
+            </div>
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Drew.jpg);">
+                <h3>Andrew Kwok</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Metal.jpg);">
+                <h3>Matthew Allan</h3>
+            </div>
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Josh.jpg);">
+                <h3>Joshua James</h3>
+            </div>
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Gilang.jpg);">
+                <h3>Mahartha Gemilang</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Bertlim.jpg);">
+                <h3>Edbert Halim</h3>
+            </div>
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Joel.jpg);">
+                <h3>Joel Gunawan</h3>
+            </div>
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Zanite.jpg);">
+                <h3>Albert Yulius Ramahalim</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Clay.jpg);">
+                <h3>Clayton Fernalo</h3>
+            </div>
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Mahez.jpg);">
+                <h3>Hisyam Mahezwara</h3>
+            </div>
+            <div class="members-col"
+                style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Gansus.jpg);">
+                <h3>Muflih Naufal Maxi</h3>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <h1>About Us</h1>
+    </section>
+
+    <!-- JS -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
