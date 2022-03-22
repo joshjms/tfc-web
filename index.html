@@ -129,7 +129,7 @@
         var aboutPage = 0;
         var refreshCtr = 0;
         var about = ["We are the TFC Fan Club! We consist of competitive programmers who are participating in informatics competitions. We would like to share our knowledge from years of experience and build TFC, a friendly niche competitive programming community.", "We plan to create projects that will entertain all of you informatics enthusiasts. In fact, we already have some projects in mind!"];
-        
+        var aboutText = document.getElementById("aboutText");
         window.setInterval('addRefreshCtr()', 1000);
         function showMenu() {
             navLinks.style.display = "block";
@@ -147,7 +147,21 @@
         function nextAbout() {
             aboutPage = (aboutPage + 1) % 2;
             refreshCtr = 0;
-            document.getElementById("aboutText").innerHTML = about[aboutPage];
+            aboutText.innerHTML = about[aboutPage];
+            unfade(aboutText);
+        }
+        function unfade(element) {
+            var op = 0.1;
+            element.style.display = 'block';
+            element.style.opacity = op;
+            var timer = setInterval(function () {
+                if (op >= 1){
+                    clearInterval(timer);
+                }
+                element.style.opacity = op;
+                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op += op * 0.1;
+            }, 10);
         }
     </script>
 </body>
