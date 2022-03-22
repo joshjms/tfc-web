@@ -196,3 +196,11 @@ nav .fa{
 .about-col:hover{
     cursor:pointer;
 }
+@media(max-width:700px){
+    .about h1{
+        font-size:30px;
+    }
+    .about-col{
+        font-size:14px;
+    }
+}
