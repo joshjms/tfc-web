@@ -12,15 +12,15 @@
 </head>
 
 <body>
-    <section class="header">
+    <section class="header" id="header">
         <nav>
             <a href="index.html"><img class="logo" src="logo.png"></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">MEMBERS</a></li>
-                    <li><a href="">ABOUT</a></li>
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#members">MEMBERS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
                     <li><a href="">BLOG</a></li>
                     <li><a href="">CONTACT</a></li>
                 </ul>
@@ -33,7 +33,7 @@
             <a href="" class="hero-btn">Learn More</a>
         </div>
     </section>
-    <section class="members">
+    <section class="members" id="members">
         <h1>TFC Members</h1>
         <p>And of course, there's Tzaph</p>
         <div class="row">
@@ -95,7 +95,7 @@
             </div>
             <div class="members-col"
                 style="background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Members/Mahez.jpg);">
-                <h3>Hisyam Mahezwara</h3>
+                <h3>Hisyam Maheswara</h3>
                 <p></p>
             </div>
             <div class="members-col"
@@ -105,18 +105,31 @@
             </div>
         </div>
     </section>
-    <section class="about">
-        <h1>About Us</h1>
+    <section class="about" id="about">
+        <h1>Hello World!</h1>
+        <div class="row">
+            <div class="about-col" id = "aboutText" onclick = "nextAbout()">
+                <p> We are the TFC Fan Club! We consist of competitive programmers who are participating in informatics
+                    competitions. We would like to share our knowledge from years of experience and build TFC, a
+                    friendly niche CP
+                    community. </p>
+            </div>
+        </div>
     </section>
-
     <!-- JS -->
     <script>
         var navLinks = document.getElementById("navLinks");
+        var aboutPage = 0;
+        var about = ["We are the TFC Fan Club! We consist of competitive programmers who are participating in informatics competitions. We would like to share our knowledge from years of experience and build TFC, a friendly niche competitive programming community.", "We plan to create projects that will entertain all of you informatics enthusiasts. In fact, we already have some projects in mind!"];
         function showMenu() {
-            navLinks.style.right = "0";
+            navLinks.style.display = "block";
         }
         function hideMenu() {
-            navLinks.style.right = "-200px";
+            navLinks.style.display = "none";
+        }
+        function nextAbout() {
+            aboutPage = (aboutPage + 1) % 2;
+            document.getElementById("aboutText").innerHTML = about[aboutPage];
         }
     </script>
 </body>
