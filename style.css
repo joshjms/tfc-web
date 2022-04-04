@@ -229,3 +229,11 @@ nav .fa{
     color:#f44336;
     transition:0.5s;
 }
+h3 a {
+    color:#fff;
+    text-decoration: none;
+}
+h3 a:hover {
+    color:#f44336;
+    transition:0.5s;
+}
